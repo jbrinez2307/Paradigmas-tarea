@@ -1,5 +1,3 @@
-package Algoritmo2;
-
 public class EuclidesMCM {
 
     public static void main(String[] args) {
