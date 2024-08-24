@@ -1,20 +1,32 @@
-public static int Sucesora (int n){
-        return n+1;
+public class Main {
+
+    public static int Sucesora(int n) {
+        return n + 1;
     }
-    
-    public static int Suma (int x, int y){
-        int resultado=x;
+
+    public static int Suma(int x, int y) {
+        int resultado = x;
         for (int i = 0; i < y; i++) {
-            resultado=Sucesora(resultado);
+            resultado = Sucesora(resultado);
         }
         return resultado;
     }
-    
-    public static int Multiplicacion (int x, int y){
-        int resultado=0;
+
+    public static int Multiplicacion(int x, int y) {
+        int resultado = 0;
         for (int i = 0; i < y; i++) {
-            resultado=Suma(resultado,x);
+            resultado = Suma(resultado, x);
         }
         return resultado;
+    }
+
+    public static void main(String[] args) {
+        
+        int primerNumero = 5;
+        int segundoNumero = 3;
+        
+        System.out.println("Sucesora de " + primerNumero + ": " + Sucesora(primerNumero));
+        System.out.println("Suma de " + primerNumero + " y " + segundoNumero + ": " + Suma(primerNumero, segundoNumero));
+        System.out.println("Multiplicacinn de " + primerNumero + " y " + segundoNumero + ": " + Multiplicacion(primerNumero, segundoNumero));
     }
 }
